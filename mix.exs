@@ -4,7 +4,7 @@ defmodule OcvPhotoAnalyzer.Mixfile do
   def project do
     [
       app: :ocv_photo_analyzer,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.5",
       name: "ocv_photo_analyzer",
       description: description(),
@@ -31,7 +31,7 @@ defmodule OcvPhotoAnalyzer.Mixfile do
 
   defp package do
     %{
-      files: ["lib/*", "priv/*", "mix.exs", "README.md"],
+      files: ["src/*", "lib/*", "priv/*", "mix.exs", "README.md", "Makefile"],
       maintainers: ["Steven Fuchs"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/teh_snappy/ocv_photo_analyzer"}
