@@ -1,6 +1,6 @@
 
 #include "opencv2/highgui.hpp"
-#include "opencv/imgproc.hpp"
+#include "opencv2/imgproc.hpp"
 #include <iostream>
 #include <ei.h>
 #include <poll.h>
