@@ -25,7 +25,7 @@ ifeq ($(UNAME_S),Linux)
   LDFLAGS += -lrt
 endif
 
-CFLAGS = -I"/usr/local/include/"
+CFLAGS = -I"/usr/local/include/" -I"/usr/local/opt/opencv@2/include/" -I"/usr/local/opt/opencv@2/imgproc/"
 ERL_ROOT_DIR = $(ERLHOME)
 
 # Look for the EI library and header files
@@ -56,7 +56,7 @@ LDFLAGS += -framework CoreFoundation -framework IOKit
 endif
 endif
 
-LIBS_opencv = -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_imgcodecs
+LIBS_opencv = -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect
 
 
 

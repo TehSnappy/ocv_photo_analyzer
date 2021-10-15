@@ -10,14 +10,15 @@ defmodule OcvPhotoAnalyzer.Analyzer do
 
     case Porcelain.exec(executable_path(), proc_params, out: :iodata, async_in: true) do
       %Result{err: nil, out: [_, data], status: 0} ->
-        data |> strip_length_int |> :erlang.binary_to_term()
+        ans = data |> strip_length_int |> :erlang.binary_to_term()
+        {:ok, ans}
 
       %Result{err: err, status: status} ->
         Logger.error("received exec error #{err} status: #{status}")
-        %{err: :exec_error}
+        {:error, :exec_error}
 
       _ ->
-        %{err: :unknown}
+        {:error, :unknown}
     end
   end
 
