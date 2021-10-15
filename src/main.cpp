@@ -1,5 +1,5 @@
 
-#include "opencv/highgui.hpp"
+#include "opencv2/highgui.hpp"
 #include "opencv/imgproc.hpp"
 #include <iostream>
 #include <ei.h>
