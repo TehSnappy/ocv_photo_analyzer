@@ -1,6 +1,5 @@
-
-#include "opencv/highgui.hpp"
-#include "opencv/imgproc.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 #include <iostream>
 #include <ei.h>
 #include <poll.h>
@@ -112,7 +111,7 @@ void get_dominant(Mat src, char* resp, int* respIndex) {
   
   Mat labels;
   Mat centers;
-  kmeans(samples, clusters, labels, TermCriteria(CV_TERMCRIT_ITER|CV_TERMCRIT_EPS, iterations, precision), attempts, KMEANS_PP_CENTERS, centers );
+  kmeans(samples, clusters, labels, TermCriteria(TermCriteria::MAX_ITER|TermCriteria::EPS, iterations, precision), attempts, KMEANS_PP_CENTERS, centers );
 
   send_dominant(resp, respIndex, centers);
 }
