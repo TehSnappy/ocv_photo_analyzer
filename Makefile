@@ -25,7 +25,7 @@ ifeq ($(UNAME_S),Linux)
   LDFLAGS += -lrt
 endif
 
-CFLAGS += -I " /usr/local/lib64/" -I"/usr/local/include/" -I"/usr/local/include/opencv2/" -I"/usr/local/opt/opencv@4/include/opencv4" -I"/usr/local/include/opencv4/"
+CFLAGS += -I "/usr/bin/" -I "/usr/local/lib64/" -I"/usr/local/include/" -I"/usr/local/include/opencv2/" -I"/usr/local/opt/opencv@4/include/opencv4" -I"/usr/local/include/opencv4/"
 ERL_ROOT_DIR = $(ERLHOME)
 
 # Look for the EI library and header files
