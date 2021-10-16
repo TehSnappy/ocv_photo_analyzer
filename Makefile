@@ -41,7 +41,7 @@ ERL_EI_LIBDIR = "$(ERL_ROOT_DIR)/usr/lib"
 endif
 
 # Set Erlang-specific compile and linker flags
-# ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)
+ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)  -L"/usr/bin"
 ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR)
 ERL_LDFLAGS ?= -L$(ERL_EI_LIBDIR) -lei 
 
