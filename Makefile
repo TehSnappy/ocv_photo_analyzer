@@ -8,7 +8,7 @@
 # LDFLAGS	linker flags for linking all binaries
 # ERL_LDFLAGS	additional linker flags for projects referencing Erlang libraries
 
-LDFLAGS +=  
+LDFLAGS +=  -I"/usr/local/lib64/"
 CFLAGS ?= -O2 -Wall -Wextra -Wno-unused-parameter
 CFLAGS += -std=c++11 -D_GNU_SOURCE
 CC ?= $(CROSSCOMPILER)gcc
@@ -25,7 +25,7 @@ ifeq ($(UNAME_S),Linux)
   LDFLAGS += -lrt
 endif
 
-CFLAGS += -I"/usr/local/include/" -I"/usr/local/include/opencv2/" -I"/usr/local/opt/opencv@4/include/opencv4"
+CFLAGS += -I " /usr/local/lib64/" -I"/usr/local/include/" -I"/usr/local/include/opencv2/" -I"/usr/local/opt/opencv@4/include/opencv4" -I"/usr/local/include/opencv4/"
 ERL_ROOT_DIR = $(ERLHOME)
 
 # Look for the EI library and header files
@@ -56,7 +56,7 @@ LDFLAGS += -framework CoreFoundation -framework IOKit
 endif
 endif
 
-LIBS_opencv = -lopencv_core -lopencv_core.4.5 -lopencv_highgui -lopencv_highgui.4.5 -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_imgproc -lopencv_imgcodecs
+LIBS_opencv = -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_imgproc -lopencv_imgcodecs
 
 
 
