@@ -18,3 +18,6 @@ erl_crash.dump
 
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+priv/analyzer
+src/main.o
+.DS_Store
