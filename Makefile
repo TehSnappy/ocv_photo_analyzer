@@ -56,7 +56,7 @@ LDFLAGS += -framework CoreFoundation -framework IOKit
 endif
 endif
 
-LIBS_opencv = -lopencv_core -lopencv_core.4.5 -lopencv_highgui -lopencv_highgui.4.5 -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_imgproc -lopencv_imgcodecs
+LIBS_opencv = -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect -lopencv_imgproc -lopencv_imgcodecs
 
 
 
