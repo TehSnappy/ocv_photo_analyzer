@@ -8,7 +8,7 @@
 # LDFLAGS	linker flags for linking all binaries
 # ERL_LDFLAGS	additional linker flags for projects referencing Erlang libraries
 
-LDFLAGS +=  -I"/usr/local/lib64/"
+LDFLAGS +=  -I"/usr/local/lib64/" -I"/usr/bin/"
 CFLAGS ?= -O2 -Wall -Wextra -Wno-unused-parameter
 CFLAGS += -std=c++11 -D_GNU_SOURCE
 CC ?= $(CROSSCOMPILER)gcc
