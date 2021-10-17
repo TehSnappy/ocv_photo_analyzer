@@ -8,7 +8,7 @@
 # LDFLAGS	linker flags for linking all binaries
 # ERL_LDFLAGS	additional linker flags for projects referencing Erlang libraries
 
-LDFLAGS +=  -I"/usr/local/lib64/"
+LDFLAGS +=  -I"/usr/local/lib64/" -I"/usr/bin/"
 CFLAGS ?= -O2 -Wall -Wextra -Wno-unused-parameter
 CFLAGS += -std=c++11 -D_GNU_SOURCE
 CC ?= $(CROSSCOMPILER)gcc
@@ -41,11 +41,11 @@ ERL_EI_LIBDIR = "$(ERL_ROOT_DIR)/usr/lib"
 endif
 
 # Set Erlang-specific compile and linker flags
-# ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)
-ERL_CFLAGS ?= -I$(ERL_EI_INCLUDE_DIR)
-ERL_LDFLAGS ?= -L$(ERL_EI_LIBDIR) -lei 
+ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)  -L"/usr/bin"
+ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR)
+ERL_LDFLAGS += -L$(ERL_EI_LIBDIR) -L"/usr/bin/" -lei 
 
-ERL_LDFLAGS += -lc++
+ERL_LDFLAGS += /usr/bin/c++
 ERL_CFLAGS += -I$(/usr/local/lib/erlang/usr/include)
 
 
