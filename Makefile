@@ -45,7 +45,7 @@ ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)  -L"/usr/bin"
 ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR)
 ERL_LDFLAGS += -L$(ERL_EI_LIBDIR) -lei 
 
-ERL_LDFLAGS += -lc++
+ERL_LDFLAGS += -lstdc++
 ERL_CFLAGS += -I$(/usr/local/lib/erlang/usr/include)
 
 
