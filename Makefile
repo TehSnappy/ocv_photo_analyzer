@@ -25,7 +25,7 @@ ifeq ($(UNAME_S),Linux)
   LDFLAGS += -lrt
 endif
 
-CFLAGS += -I "/usr/local/lib64/" -I"/usr/local/include/" -I"/usr/local/include/opencv2/" -I"/usr/local/opt/opencv@4/include/opencv4" -I"/usr/local/include/opencv4/"
+CFLAGS += -I "/usr/local/lib64/" -I"/usr/local/include/" -I"/usr/local/include/opencv4/" -I"/usr/local/opt/opencv@4/include/opencv4"
 ERL_ROOT_DIR = $(ERLHOME)
 
 # Look for the EI library and header files
@@ -41,7 +41,7 @@ ERL_EI_LIBDIR = "$(ERL_ROOT_DIR)/usr/lib"
 endif
 
 # Set Erlang-specific compile and linker flags
-ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)  -L"/usr/bin"
+ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR) -L$(/usr/lib)
 ERL_CFLAGS += -I$(ERL_EI_INCLUDE_DIR)
 ERL_LDFLAGS += -L$(ERL_EI_LIBDIR) -lei 
 
